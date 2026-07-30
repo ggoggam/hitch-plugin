@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "hitch",
+  "displayName": "hitch",
+  "version": "0.1.0",
+  "description": "Plan trips collaboratively with hitch. Connects the hitch MCP server and adds skills for building an itinerary, logging bookings, briefing a trip, and working the pre-departure list.",
+  "author": {
+    "name": "ggoggam",
+    "url": "https://github.com/ggoggam"
+  },
+  "homepage": "https://hitch.ggoggam.dev",
+  "repository": "https://github.com/ggoggam/hitch-plugin",
+  "license": "MIT",
+  "keywords": ["travel", "trips", "itinerary", "planning", "mcp"],
+  "userConfig": {
+    "server_url": {
+      "type": "string",
+      "title": "hitch MCP endpoint",
+      "description": "The hitch instance to connect to. Leave the default unless you self-host hitch.",
+      "default": "https://hitch.ggoggam.dev/mcp",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hitch-plugin",
+  "description": "Plugins for hitch, the collaborative trip planner.",
+  "owner": {
+    "name": "ggoggam",
+    "url": "https://github.com/ggoggam"
+  },
+  "plugins": [
+    {
+      "name": "hitch",
+      "displayName": "hitch",
+      "source": "./plugins/hitch",
+      "description": "Plan trips collaboratively with hitch. Connects the hitch MCP server and adds skills for building an itinerary, logging bookings, briefing a trip, and working the pre-departure list.",
+      "category": "productivity",
+      "keywords": ["travel", "trips", "itinerary", "planning", "mcp"],
+      "license": "MIT"
+    }
+  ]
+}
