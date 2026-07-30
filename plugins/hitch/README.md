@@ -8,18 +8,47 @@ pre-departure list.
 
 ## Install
 
+Run these in Claude Code:
+
+**1. Add the marketplace.**
+
 ```
 /plugin marketplace add ggoggam/hitch-plugin
+```
+
+**2. Install the plugin.**
+
+```
 /plugin install hitch@hitch-plugin
 ```
 
-Then authenticate: run `/mcp`, pick `hitch`, and authenticate. The server is an
-OAuth-protected resource and requests the `profile`, `trips:read`, and `trips:write`
-scopes — until you authenticate, every hitch tool returns 401.
+If you self-host hitch, Claude Code prompts for your endpoint here. Accept the
+default (`https://hitch.ggoggam.dev/mcp`) otherwise, and change it later with
+`/plugin` → `hitch` → configure if you need to.
 
-If you self-host hitch, set the endpoint when the plugin prompts you at enable time,
-or later with `/plugin` → hitch → configure. It defaults to
-`https://hitch.ggoggam.dev/mcp`.
+**3. Authenticate.** The hitch server is an OAuth-protected resource and requests the
+`profile`, `trips:read`, and `trips:write` scopes. Until you sign in, every hitch tool
+returns 401:
+
+```
+/mcp
+```
+
+Pick `hitch`, choose Authenticate, and approve the scopes in the browser tab that
+opens.
+
+**4. Check it worked.** `/mcp` should list `hitch` as connected, and typing `/hitch`
+should offer five commands. `/hitch:trip-brief` is the safe one to try first — it
+only reads.
+
+### Troubleshooting
+
+| Symptom | Cause |
+| :--- | :--- |
+| Tools return 401 | Not authenticated yet — step 3 |
+| `/hitch` commands missing after install | Run `/reload-plugins`, or restart Claude Code |
+| Two of every hitch tool | You also have hitch as a user or project MCP server — see below |
+| Connection fails on a self-hosted instance | Endpoint must be the full MCP path, e.g. `https://your-host/mcp`, not the site root |
 
 ## Skills
 
