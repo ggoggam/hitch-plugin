@@ -8,7 +8,7 @@
     "name": "ggoggam",
     "url": "https://github.com/ggoggam"
   },
-  "homepage": "https://hitch.ggoggam.dev",
+  "homepage": "https://github.com/ggoggam/hitch-plugin/tree/main/plugins/hitch",
   "repository": "https://github.com/ggoggam/hitch-plugin",
   "license": "MIT",
   "keywords": ["travel", "trips", "itinerary", "planning", "mcp"],

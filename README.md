@@ -7,11 +7,13 @@ collaborative trip planner.
 
 Run these in Claude Code:
 
-**1. Add the marketplace.**
+**1. Add the marketplace.** This is the GitHub repo, in `owner/repo` shorthand:
 
 ```
 /plugin marketplace add ggoggam/hitch-plugin
 ```
+
+Append `@ref` to pin to a branch or tag, e.g. `ggoggam/hitch-plugin@main`.
 
 **2. Install the plugin.**
 
@@ -55,24 +57,27 @@ refer to tools by bare name, so they work either way.
 
 ## Develop locally
 
-Clone it, then add the working copy as a marketplace by path — nothing has to be
-published for this to work:
+Clone the repo, then add your working copy as a marketplace by path — nothing has
+to be published for this to work:
 
 ```bash
 git clone https://github.com/ggoggam/hitch-plugin
-cd hitch-plugin
 ```
 
+Then, with Claude Code running in the directory you cloned into:
+
 ```
-/plugin marketplace add .
+/plugin marketplace add ./hitch-plugin
 /plugin install hitch@hitch-plugin
 ```
 
-`/plugin marketplace add` takes any local path, so `.` works when you launched
-Claude Code from the repo root; pass the absolute path otherwise. If you already
-installed from GitHub, remove that copy first with
-`/plugin marketplace remove hitch-plugin` — a marketplace name can only be
-registered once per user, and the local one would replace it silently.
+The source must be a `./`-prefixed relative path or an absolute one — a bare name
+is read as GitHub `owner/repo` shorthand, not a local directory.
+
+If you already installed from GitHub, remove that copy first with
+`/plugin marketplace remove hitch-plugin`. A marketplace name can only be
+registered once per user, so the local one replaces the published one silently,
+and it's easy to spend an afternoon testing the copy you aren't editing.
 
 Validate before pushing:
 

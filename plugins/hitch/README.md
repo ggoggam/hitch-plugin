@@ -10,11 +10,13 @@ pre-departure list.
 
 Run these in Claude Code:
 
-**1. Add the marketplace.**
+**1. Add the marketplace.** This is the GitHub repo, in `owner/repo` shorthand:
 
 ```
 /plugin marketplace add ggoggam/hitch-plugin
 ```
+
+Append `@ref` to pin to a branch or tag, e.g. `ggoggam/hitch-plugin@main`.
 
 **2. Install the plugin.**
 

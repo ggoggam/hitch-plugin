@@ -14,7 +14,13 @@
       "description": "Plan trips collaboratively with hitch. Connects the hitch MCP server and adds skills for building an itinerary, logging bookings, briefing a trip, and working the pre-departure list.",
       "category": "productivity",
       "keywords": ["travel", "trips", "itinerary", "planning", "mcp"],
-      "license": "MIT"
+      "license": "MIT",
+      "author": {
+        "name": "ggoggam",
+        "url": "https://github.com/ggoggam"
+      },
+      "homepage": "https://github.com/ggoggam/hitch-plugin/tree/main/plugins/hitch",
+      "repository": "https://github.com/ggoggam/hitch-plugin"
     }
   ]
 }
