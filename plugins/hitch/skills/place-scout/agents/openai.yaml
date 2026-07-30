@@ -1,0 +1,7 @@
+interface:
+  display_name: Place Scout
+  short_description: Research candidates for a trip and save them to its shortlist
+  brand_color: "#111827"
+  default_prompt: Find six good dinner options near where we're staying
+policy:
+  allow_implicit_invocation: true

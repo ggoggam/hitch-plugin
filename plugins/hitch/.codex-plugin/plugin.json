@@ -1,0 +1,35 @@
+{
+  "name": "hitch",
+  "version": "0.1.0",
+  "description": "Plan trips collaboratively with hitch. Connects the hitch MCP server and adds skills for building an itinerary, logging bookings, briefing a trip, and working the pre-departure list.",
+  "author": {
+    "name": "ggoggam",
+    "url": "https://github.com/ggoggam"
+  },
+  "homepage": "https://github.com/ggoggam/hitch-plugin/tree/main/plugins/hitch",
+  "repository": "https://github.com/ggoggam/hitch-plugin",
+  "license": "MIT",
+  "keywords": ["travel", "trips", "itinerary", "planning", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": {
+    "hitch": {
+      "type": "http",
+      "url": "https://hitch.ggoggam.dev/mcp"
+    }
+  },
+  "interface": {
+    "displayName": "hitch",
+    "shortDescription": "Plan trips collaboratively with hitch",
+    "longDescription": "hitch is a collaborative trip planner. This plugin connects its MCP server and adds the workflows around it: starting a trip with the destination pinned so the map and weather work, filling in days from a saved shortlist, turning pasted confirmations into bookings with the times printed on the ticket, briefing where a trip stands, and working the pre-departure list. Trips are shared and edited concurrently, so the skills carry the discipline that keeps a collaborator's edits from being overwritten.",
+    "developerName": "ggoggam",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://hitch.ggoggam.dev/",
+    "brandColor": "#111827",
+    "defaultPrompt": [
+      "Start a trip to Kyoto, 12-18 April",
+      "Show me where my Kyoto trip stands",
+      "Log this booking confirmation into my trip"
+    ]
+  }
+}
